@@ -1,0 +1,208 @@
+body {
+    width: 960px;
+    height: 960px;
+    margin: 0px auto;
+    padding: 10px;
+}
+.icon {
+    padding-top: 5px;
+    text-align: left;
+    width: 50%;
+    font-weight: 600;
+    font-size: 25px;
+}
+.menu {
+    display: flex;
+}
+.menu1 li{
+    text-decoration: none;
+    margin: 10px;
+    display: inline;
+    color: gray;
+    font-family: "Comic Sans MS";
+}
+.menu1 {
+    text-align: right;
+    width: 50%;
+}
+.cuadro1{
+    margin-top: 20px;
+    padding-top: 30px;
+    font-family: sans-serif;
+    margin: 0px auto;
+    height: 300px;
+    border: 1px solid PeachPuff; 
+    background-color: PeachPuff;
+    text-align: center;
+}
+h1{
+    color: black;
+    font-weight:900;
+}
+.getin{
+    margin: 15px;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+p{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: darkgray;
+}
+h2{
+    font-weight: 100;
+}
+.preg1{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 40px;
+    color: black;
+    font-weight: 100;
+}
+.table1{
+    display: flex;
+}
+.t{
+    margin-right: 35px;
+    margin-top: 20px;
+    width: 450px !important;
+    height: 500px !important;
+}
+.texto {
+    margin: 0px auto;
+}
+.learn{
+    margin: 15px;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    color: black;
+    background-color: white;
+    border: 1px solid gray;
+}
+.cuadro2{
+  display: flex;
+}
+.cuadro2 div {
+    margin: 15px;
+}
+.cuadro2 img{
+    width: 300px !important;
+    margin-bottom: 12px;
+}
+.m1 {
+    margin-left: 0px !important;
+}
+.learn1{
+    width: 120px;
+    height: 40px;
+    border-radius: 15px;
+    margin-left: 415px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+}
+.c1{
+    border-radius: 50%;
+}
+.p1{
+    text-align: center;
+}
+.circulos{
+    margin: 0px;
+    width: 100% !important;
+    background-color:PeachPuff;
+    display: flex;
+}
+.cir1{
+    padding-top: 40px;
+    text-align: center !important;
+    margin-left: 100px !important;
+}
+.cir2{
+    padding-top: 40px;
+    text-align: center !important;
+    margin-left: 120px !important;
+}
+.p2{
+    text-align: center;
+    font-size: 30px;
+}
+.cuadro5{
+    margin: 0px auto;
+    width: 100%;
+    display: inline-flex;
+}
+.frank{
+    text-align: right;
+    width: 35%;
+}
+.parrafo{
+    text-align: left !important;
+    margin-left: 120px;
+    width: 50%;
+}
+.cuadro6{
+    margin: 0px auto;
+    width: 100%;
+    display: inline-flex;
+}
+.cuadro6 img{
+    margin-left: 20px;
+}
+.p3{
+    font-size: 33px;
+    text-align: center;
+    padding-top: 35px;
+}
+.negro{
+    margin: 10px auto;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.cuadro7{
+    margin: 0px auto;
+    display: inline-flex;
+    font-size: 15px;
+    padding: 60px;
+}
+.logos{
+
+    width: 50%;
+}
+.logos1{
+    display: inline-flex;
+}
+i{
+    width: 30px;
+    height: 30px;
+}
+.datos{
+    padding-left: 100px;
+}
+.sub{
+    width: 120px;
+    height: 40px;
+    border-radius: 15px;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+}
+h5{
+    font-family: "Comic Sans MS";
+    font-weight: 100;
+}
+.anio{
+    color: black;
+    font-family: "Comic Sans MS";
+    font-weight: 900;
+}
+.footer{
+    text-align: center;
+}
+

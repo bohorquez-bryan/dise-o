@@ -1,0 +1,87 @@
+.h2{
+    text-align: center;
+}
+.bg-faded {
+    background-color: gray;
+}
+.navbar-light .navbar-nav
+.nav-link {
+    color: white;
+    margin-left: 35px;
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-toggler {
+    color: white;
+}
+.carousel-control-next-icon {
+    height: 80px;
+}
+.phone{
+    margin: 0 auto;
+    width: 800px;
+}
+.fa-5x{
+    font-size: 500px;
+    color: lightslategray;
+    padding-left: 5%;
+}
+.media-body{
+    margin-top: 120px;
+    padding-left: 10%;
+}
+.nav-link{
+    color: white;
+}
+.jumbotron-fluid{
+    background-color: white;
+    border: 1px solid lightgray;
+}
+.c1{
+    border-radius: 50%;
+}
+
+h3{
+    text-align: center;
+}
+.botones{
+    text-align: center;
+}
+.card{
+    border: 1px solid white;
+}
+.icons1 i {
+    padding-left: 30px;
+}
+.card-block{
+    text-align: center;
+}
+.progress2{
+    margin: 0 auto;
+    width: 800px;
+}
+.formulario{
+    margin: 0 auto;
+    width: 800px;
+}
+.icons{
+    margin-top: 40px;
+    display: inline-flex;
+}
+.icons i {
+    padding-left: 40px;
+}
+@media screen and (max-width: 700px) {
+    .formulario {
+        width: 30%;
+    }
+    .formulario {
+        width: 30%;
+    }
+    .phone{
+        width: 30%;
+    }
+    .media-body{
+        width: 30%;
+    }
+
+}

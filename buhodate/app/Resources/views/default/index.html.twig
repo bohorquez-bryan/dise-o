@@ -1,0 +1,257 @@
+{% extends "base.html.twig" %}
+{# Modal ver include para añadir otro twig#}
+{% block title %}BuhoDate | ESFOT{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {#Header logo y navegación#}
+        <nav class="navbar navbar-toggleable-md navbar-light" id="menuprincipal">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="{{ asset('/') }}"><img class="logo" src="{{ asset('image/logo1.png') }}" alt="logo buho"></a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul id="perfil-menu" class="navbar-nav mr-auto text-center">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="{{ asset('/') }}">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#demostracion">Demostración</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactos">Contactos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ asset('/login') }}">Iniciar Sesión</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+
+        {# Video de Fondo#}
+        <div class="row fondo">
+            <div class="col">
+                <video autoplay loop class="video">
+                    <source src="{{ asset('videos/MP4/Yes-No.mp4') }}" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    <source src="{{ asset('videos/WEBM/Yes-No.webm') }}" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                </video>
+            </div>
+        </div>
+        {# Texto de Bienvenida #}
+        <div class="row pos">
+            <div class="col-2 social">
+                {#Redes Sociales Header#}
+                <div class="row icon_social">
+                    <div class="col">
+                        <a href=""><i class="fa fa-facebook fa" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="row icon_social">
+                    <div class="col">
+                        <a href=""><i class="fa fa-instagram fa" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="row icon_social">
+                    <div class="col">
+                        <a href=""><i class="fa fa-twitter fa" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="row icon_social">
+                    <div class="col">
+                        <a href=""><i class="fa fa-google-plus fa" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            {# --- Texto y Boton --- #}
+            <div class="col-10">
+                <div class="row">
+                    <div class="col msj1">
+                        <h1 class="text-white">La cita de tus sueños</h1>
+                    </div>
+                </div>
+
+               {#<div class="row">
+                    <div class="col btnvideo">
+                        <a class="boton1" href="{{ asset('/login') }}">Buscar Cita</a>
+                    </div>
+                </div>#}
+
+               {#--- LOGIN MODAL ---#}
+                <div class="row">
+                    <div class="col btnvideo">
+                        <button class="boton1" data-toggle="modal" data-target=".modal">Buscar Cita</button>
+
+                        <div id="modal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog ">
+                                <div class="modal-content">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div id="loginmodal">
+                                        {{ include('@FOSUser/Security/login.html.twig') }}
+                                    </div>
+                                    <div id="registromodal" class="modalnone">
+                                        {% include ('@FOSUser/Registration/register_content.html.twig') %}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# Demostración #}
+        <div class="row demo" id="demostracion">
+            <div class="col">
+                {# Texto #}
+                <div class="row" id="demo1">
+                    <div class="col text-center"><h1>¿Cómo funciona?</h1></div>
+                </div>
+                {# Card Boostrap#}
+                <div class="row" id="demo2">
+                    {# Regístrate #}
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/registro.png') }}" alt="registro" >
+                            <div class="card-block text-muted">
+                                <h4 class="card-title text-center">Regístrate</h4>
+                                <p class="card-text text-center">
+                                    Crea una cuenta con tu correo institucional y una contraseña
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {# Perfil #}
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/perfil.png') }}" alt="perfil">
+                            <div class="card-block text-muted">
+                                <h4 class="card-title text-center">Crea un perfil</h4>
+                                <p class="card-text text-center">
+                                    Personaliza tu perfil, agrega tu foto y describe tus pasatiempos
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {# Buscar #}
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/buscar_perfil.png') }}" alt="perfil">
+                            <div class="card-block text-muted">
+                                <h4 class="card-title text-center">Busca a la persona ideal</h4>
+                                <p class="card-text text-center">
+                                    Empieza a conocer personas, ya solo estas a un solo paso.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {# Cita #}
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="card">
+                            <img class="card-img-top align-self-center" src="{{ asset('image/calendar.png') }}" alt="perfil">
+                            <div class="card-block text-muted">
+                                <h4 class="card-title text-center">Haz la cita</h4>
+                                <p class="card-text text-center">
+                                    Ten una cita y preparate para vivir experiencias inolvidables
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {# Boton Demo #}
+                <div class="row" id="demo3">
+                    <div class="col col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-2 align-self-center">
+                        <button id="btndemo" class="boton2" data-toggle="modal" data-target=".bd-example-modal-lg">Ver Demo</button>
+                        {# MODAL #}
+                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content embed-responsive embed-responsive-16by9">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <iframe class="embed-responsive-item" width="800" height="491" src="http://www.powtoon.com/embed/cJb7VPRhv6Y/?autoplay=1" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {# Contactos #}
+    <div class="container-fluid" id="contactos">
+        <div class="container">
+            <div class="row align align-items-center">
+                {# Datos de Contactos #}
+                <div class="col-12 col-lg-5 col-sm-12" id="datos_cont">
+                    <div><h2 class="">Contáctanos en: </h2></div>
+                    <br>
+                    <div>
+                        <i class="fa fa-map-marker te" aria-hidden="true"> Ladrón de Guevara E11·253 [PO·Box 17-01-2759]
+                            Quito · Ecuador</i>
+                        <br>
+                        <i class="fa fa-phone" aria-hidden="true"> (+593) 2 2976 300</i>
+                        <br>
+                        <i class="fa fa-envelope" aria-hidden="true"> info@epn.edu.ec</i>
+                    </div>
+                    <br>
+                    <div>
+                        <iframe
+                                width="430"
+                                height="280"
+                                frameborder="0" style="border:0"
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCo2Z5QkG9TiIangl8Ff8rE9_bOASvZj-0&q=Escuela+Politécnica+Nacional+Ladron+de+Guevera+E11-253" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                </div>
+                {# Logo 2#}
+                <div class="col-12 col-lg-2 col-sm-12 align-self-center">
+                    <img src="{{ asset('image/logo2.png') }}" alt="Log buhodate" width="100" height="100" >
+                </div>
+                {# Formulario #}
+                <div class="col-12 col-lg-5 col-sm-12" id="form_sms">
+                    <form>
+                        <div class="form-group">
+                            <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre y Apellido">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formGroupExampleInput2" class="form-control" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                        </div>
+                        <div>
+                            <button id="btnenviar" class="btn btn-warning">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-8 text-white">
+                        <p><strong>BuhoDate</strong> Copyright: © 2017. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4" id="foot_SN">
+                        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+{% endblock %}
